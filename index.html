@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Git & GitHub Guide</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Git & GitHub: Complete Guide</h1>
+    <p>Learn version control, collaboration, and workflow best practices</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#setup">Setup</a></li>
+      <li><a href="#commands">Commands</a></li>
+      <li><a href="#lifecycle">Lifecycle</a></li>
+      <li><a href="#branches">Branches</a></li>
+      <li><a href="#stash">Stash</a></li>
+      <li><a href="#restore">Restore/Reset</a></li>
+      <li><a href="#rebase">Rebase vs Merge</a></li>
+      <li><a href="#squash">Squash</a></li>
+      <li><a href="#tag">Tags</a></li>
+      <li><a href="#workflow">Workflow</a></li>
+      <li><a href="#github">GitHub Usage</a></li>
+      <li><a href="#contribute">Contributing</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="intro">
+      <h2>Introduction</h2>
+      <p><strong>Git</strong> is a distributed version control system used to track and manage source code. <strong>GitHub</strong> is a platform for hosting Git repositories online, used for collaboration, issues, pull requests, and project management.</p>
+    </section>
+
+    <section id="setup">
+      <h2>Setup & Configuration</h2>
+      <p>To install Git:</p>
+      <ul>
+        <li><strong>Windows:</strong> Download from <a href="https://git-scm.com">git-scm.com</a></li>
+        <li><strong>Mac:</strong> Use <code>brew install git</code></li>
+        <li><strong>Linux:</strong> <code>sudo apt install git</code></li>
+      </ul>
+      <p>Configure your identity:</p>
+      <code>git config --global user.name "Your Name"</code><br/>
+      <code>git config --global user.email "you@example.com"</code>
+    </section>
+
+    <section id="commands">
+      <h2>Essential Git Commands</h2>
+      <ul>
+        <li><code>git init</code> – Start a repository</li>
+        <li><code>git clone URL</code> – Copy a remote repo</li>
+        <li><code>git add file</code> – Stage files</li>
+        <li><code>git commit -m "msg"</code> – Save snapshot</li>
+        <li><code>git push/pull</code> – Sync with remote</li>
+        <li><code>git log</code> – View commit history</li>
+        <li><code>git status</code> – Show working tree state</li>
+      </ul>
+    </section>
+
+    <section id="lifecycle">
+      <h2>Git File Lifecycle</h2>
+      <p>Files move through these stages:</p>
+      <ul>
+        <li><strong>Untracked</strong> → <strong>Staged</strong> → <strong>Committed</strong> → <strong>Modified</strong></li>
+      </ul>
+    </section>
+
+    <section id="branches">
+      <h2>Branching & Merging</h2>
+      <ul>
+        <li><code>git branch</code> – List branches</li>
+        <li><code>git branch name</code> – Create branch</li>
+        <li><code>git switch name</code> – Move to branch</li>
+        <li><code>git merge</code> – Merge two branches</li>
+        <li><code>git checkout -b feature</code> – Create and switch</li>
+      </ul>
+    </section>
+
+    <section id="stash">
+      <h2>Git Stash</h2>
+      <ul>
+        <li><code>git stash</code> – Temporarily save uncommitted work</li>
+        <li><code>git stash list</code> – View stashed items</li>
+        <li><code>git stash apply</code> – Reapply changes</li>
+      </ul>
+    </section>
+
+    <section id="restore">
+      <h2>Restore & Reset</h2>
+      <ul>
+        <li><code>git restore file</code> – Discard changes</li>
+        <li><code>git reset --soft HEAD~1</code> – Undo last commit</li>
+        <li><code>git reset --hard</code> – Full reset to last commit</li>
+      </ul>
+    </section>
+
+    <section id="rebase">
+      <h2>Rebase vs Merge</h2>
+      <p><strong>Merge:</strong> Preserves history and creates a merge commit.</p>
+      <p><strong>Rebase:</strong> Rewrites history for a cleaner, linear timeline.</p>
+      <code>git rebase main</code><br/>
+      <code>git merge feature</code>
+    </section>
+
+    <section id="squash">
+      <h2>Git Squash</h2>
+      <p>Combine multiple commits into one:</p>
+      <code>git rebase -i HEAD~n</code> → Change <code>pick</code> to <code>squash</code>
+    </section>
+
+    <section id="tag">
+      <h2>Tags & Releases</h2>
+      <ul>
+        <li><code>git tag v1.0</code> – Mark a release</li>
+        <li><code>git tag -a v1.0 -m "release note"</code></li>
+        <li><code>git push origin v1.0</code> – Push tag</li>
+      </ul>
+    </section>
+
+    <section id="workflow">
+      <h2>Git Workflows</h2>
+      <p><strong>Git Flow:</strong> Uses branches like <code>main</code>, <code>develop</code>, <code>feature/</code>, <code>release/</code>, <code>hotfix/</code>.</p>
+      <p><strong>GitHub Flow:</strong> Create branch → Work → PR → Review → Merge</p>
+    </section>
+
+    <section id="github">
+      <h2>GitHub Usage</h2>
+      <ul>
+        <li>Fork repos to your account</li>
+        <li>Clone using <code>git clone URL</code></li>
+        <li>Push changes: <code>git push origin branch</code></li>
+        <li>Create PR from GitHub UI</li>
+      </ul>
+    </section>
+
+    <section id="contribute">
+      <h2>Open Source Contribution</h2>
+      <ol>
+        <li>Fork the repo</li>
+        <li>Create new branch</li>
+        <li>Make changes and commit</li>
+        <li>Push to your fork</li>
+        <li>Create Pull Request (PR)</li>
+        <li>Get reviewed & merged</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made by Karthiyayini | Git & GitHub Guide</p>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+</body>
+</html>

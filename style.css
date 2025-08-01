@@ -1,0 +1,124 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f4f8;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* Header with gradient */
+header {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #d1d9e6;
+}
+
+/* Navigation bar */
+nav {
+  background: #1c2833;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 6px;
+}
+
+nav ul li a:hover {
+  background: #f1c40f;
+  color: #2c3e50;
+}
+
+/* Main content */
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+section {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-left: 6px solid #2980b9;
+  background: #fdfefe;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #2980b9;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.3rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+}
+
+/* Code styling */
+code {
+  background: #ecf0f1;
+  padding: 0.2rem 0.4rem;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  color: #c0392b;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  border-top: 4px solid #f1c40f;
+}
